@@ -76,6 +76,7 @@
       h3Second.textContent = "ny artikel titel 2";
       pSecond.textContent = "Her er en anden ny paragraf";
 
+      //   Opretter nye elementer
       const nyArtikel = document.createElement("article");
       console.log(nyArtikel);
       const nyH3 = document.createElement("h3");
@@ -87,7 +88,10 @@
       const nyImg = document.createElement("img");
       console.log(nyImg);
 
+      //   Tilføjer billede til nyt img-element
       nyImg.src = "http://placeimg.com/640/480/arch";
+
+      //   Tilføjer elementer og tekst til section og artikel
       section.appendChild(nyArtikel);
       nyArtikel.appendChild(nyImg);
       nyH3.appendChild(nyH3Text);
