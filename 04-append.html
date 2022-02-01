@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1>Title</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="http://placeimg.com/640/480/any" alt="tilfældigt billede" />
+          <h3>Article 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            tenetur obcaecati aliquam consectetur repudiandae. Amet dolorum
+            quidem molestiae itaque veritatis consequatur voluptatibus minus
+            sequi quasi odit ex, repellat ipsum excepturi. Harum quam quaerat
+            modi natus quis veritatis quisquam praesentium culpa tenetur non
+            exercitationem voluptate voluptates eius corporis, reiciendis sequi
+            vitae beatae quae sit amet enim. Earum eos fugit unde totam.
+          </p>
+        </article>
+        <article>
+          <img src="http://placeimg.com/640/480/any" alt="tilfældigt billede" />
+          <h3>Artikel 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            tenetur obcaecati aliquam consectetur repudiandae. Amet dolorum
+            quidem molestiae itaque veritatis consequatur voluptatibus minus
+            sequi quasi odit ex, repellat ipsum excepturi. Harum quam quaerat
+            modi natus quis veritatis quisquam praesentium culpa tenetur non
+            exercitationem voluptate voluptates eius corporis, reiciendis sequi
+            vitae beatae quae sit amet enim. Earum eos fugit unde totam.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer><h4>This is the footer</h4></footer>
+    <script>
+      const headTitle = document.querySelector("header h1");
+      console.log(headTitle);
+      headTitle.textContent = "Ny title her";
+
+      const section = document.querySelector("section");
+      console.log(section);
+      const article = document.querySelector("article");
+      console.log(article);
+      const footer = document.querySelector("footer");
+
+      const imgFirst = document.querySelector("article:first-child img");
+      console.log(imgFirst);
+      const h3First = document.querySelector("article:first-child h3");
+      console.log(h3First);
+      const pFirst = document.querySelector("article:first-child p");
+      console.log(pFirst);
+
+      imgFirst.src = "http://placeimg.com/640/480/tech";
+      imgFirst.alt = "tilfældigt tech billede";
+      h3First.textContent = "ny artikel titel 1";
+      pFirst.textContent = "Her er en ny paragraf";
+
+      const imgSecond = document.querySelector("article:nth-child(2) img");
+      console.log(imgSecond);
+      const h3Second = document.querySelector("article:nth-child(2) h3");
+      console.log(h3Second);
+      const pSecond = document.querySelector("article:nth-child(2) p");
+      console.log(pSecond);
+
+      imgSecond.src = "http://placeimg.com/640/480/nature";
+      imgSecond.alt = "tilfældigt natur billede";
+      h3Second.textContent = "ny artikel titel 2";
+      pSecond.textContent = "Her er en anden ny paragraf";
+
+      const nyArtikel = document.createElement("article");
+      console.log(nyArtikel);
+      const nyH3 = document.createElement("h3");
+      const nyH3Text = document.createTextNode("Ny overskrift i artiklen");
+      console.log(nyH3Text);
+      const nyP = document.createElement("p");
+      const nyPText = document.createTextNode("Her er min tredje paragraf");
+      console.log(nyP);
+      const nyImg = document.createElement("img");
+      console.log(nyImg);
+
+      nyImg.src = "http://placeimg.com/640/480/arch";
+      section.appendChild(nyArtikel);
+      nyArtikel.appendChild(nyImg);
+      nyH3.appendChild(nyH3Text);
+      nyArtikel.appendChild(nyH3);
+      nyP.appendChild(nyPText);
+      nyArtikel.appendChild(nyP);
+    </script>
+  </body>
+</html>
